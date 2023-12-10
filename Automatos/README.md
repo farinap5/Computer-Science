@@ -8,18 +8,23 @@ Programa em python para conversão e teste de AFN/AFNe
 $$
 (A, a)\to B
 $$
+
 $$
 (A, a)\to C
 $$
+
 $$
 (B, b)\to D
 $$
+
 $$
 (C, c)\to D
 $$
+
 $$
 (D, a)\to D
 $$
+
 $$
 (D, c)\to C
 $$
@@ -57,24 +62,31 @@ Transições:
 $$
 (A, a)\to A
 $$
+
 $$
 (A, b)\to A
 $$
+
 $$
 (A, b)\to B
 $$
+
 $$
 (B, ê)\to C
 $$
+
 $$
 (C, b)\to D
 $$
+
 $$
 (D, a)\to D
 $$
+
 $$
 (D, ê)\to C
 $$
+
 Grafo De Transições
 ```mermaid
 flowchart LR
