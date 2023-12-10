@@ -1,0 +1,28 @@
+# Automato Finito Deterministico com Transições Vazias
+
+# Alfabeto:
+A a b
+
+# Estados:
+Q A B C D
+
+# Estado Inicial:
+q A
+
+# Estados Finais:
+F D
+
+# Transições
+T A a A
+T A b A
+T A b B
+T B ê C
+T C b D
+T D a D
+T D ê C
+
+# Palavras
+P abababbababa
+P aaabaababaa
+P abb
+P abab

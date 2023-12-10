@@ -1,0 +1,26 @@
+# Automato Finito Deterministico
+
+# Alfabeto
+A a b c
+
+# Estados:
+Q A B C D
+
+# Estado Final:
+F D
+
+# Estado Inicial:
+q A
+
+# Words
+P abbaba
+P abaaacc
+P abaaacccc
+P abaaxacc
+
+T A a B
+T A a C
+T B b D
+T C c D
+T D a D
+T D c C
