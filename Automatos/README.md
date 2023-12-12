@@ -1,7 +1,45 @@
 # Conversor AFNe e AFN para AFD
 
+Programa em python para conversão e teste de AFN/AFNe.
 
-Programa em python para conversão e teste de AFN/AFNe
+Execute o arquivo `Automato.py` como principal. Ele trará os exemplos a seguir.
+
+Testando uma AFNe
+```python
+m1 = Automato()
+m1.Read("input.txt")
+m1.CompileAFNe() # Utilizar quandos se trata de um AFNe
+r = m1.Verify() # Executar lista de palavras na linguagem
+out = m1.ProcessResult(r)
+print("Resultados AFNe\n"+out)
+m1.WriteToFile(out, name="afne.txt") # Escrever resultado no arquivo
+```
+
+Testando uma AFN
+```python
+m2 = Automato()
+m2.Read("input1.txt")
+m2.CompileAFN() # Utilizar quandos se trata de um AFN
+r = m2.Verify() # Executar lista de palavras na linguagem
+out = m2.ProcessResult(r)
+print("Resultados AFN\n"+out)
+m2.WriteToFile(out, name="afn.txt") # Escrever resultado no arquivo
+```
+
+Resultado:
+```
+Resultados AFNe
+M aceita a palavra <abababbababa>
+M rejeita a palavra <aaabaababaa>
+M aceita a palavra <abb>
+M rejeita a palavra <abab>
+
+Resultados AFN
+M rejeita a palavra <abbaba>
+M aceita a palavra <abaaacc>
+M aceita a palavra <abaaacccc>
+M rejeita a palavra <abaaxacc>
+```
 
 ### AFN
 

@@ -256,13 +256,23 @@ class Automato:
     
 
 if __name__ == "__main__":
-    m = Automato()
-    m.Read("input.txt")
-    m.CompileAFNe() # Utilizar quandos se trata de um AFN
-    #m.CompileAFN() # Utilizar quandos se trata de um AFNe
+    # Testando uma AFNe
+    m1 = Automato()
+    m1.Read("input.txt")
+    m1.CompileAFNe() # Utilizar quandos se trata de um AFNe
+    r = m1.Verify() # Executar lista de palavras na linguagem
+    out = m1.ProcessResult(r)
+    print("Resultados AFNe\n"+out)
+    m1.WriteToFile(out, name="afne.txt") # Escrever resultado no arquivo
+    #m.CompileAFN() # Utilizar quandos se trata de um AFN
+
+
+    # Testando uma AFN
+    m2 = Automato()
+    m2.Read("input1.txt")
+    m2.CompileAFN() # Utilizar quandos se trata de um AFN
+    r = m2.Verify() # Executar lista de palavras na linguagem
+    out = m2.ProcessResult(r)
+    print("Resultados AFN\n"+out)
+    m2.WriteToFile(out, name="afn.txt") # Escrever resultado no arquivo
     
-    #print(m.EexportTransactions()) # Mostrar resultado após conversão 
-    r = m.Verify() # Executar lista de palavras na linguagem
-    out = m.ProcessResult(r)
-    print(out)
-    m.WriteToFile(out) # Escrever resultado no arquivo
